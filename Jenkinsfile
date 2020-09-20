@@ -38,8 +38,8 @@ pipeline{
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 					sh '''
 						docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-						docker tag microservice_capstone adinalini/microservice_capstone
-						docker push adinalini/microservice_capstone
+						docker tag microservice_capstone chander1996/microservice_capstone
+						docker push chander1996/microservice_capstone
 					'''
 				    }
                 }
